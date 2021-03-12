@@ -1,3 +1,9 @@
+# share_nodes_ui.py
+# Author: Esteban Ortega
+# Date: 03/11/21
+
+"""ShareNodes UI , the view part of the tool."""
+
 from PySide.QtGui import *
 from PySide.QtCore import *
 
@@ -7,7 +13,7 @@ class ShareNodesUI(QTabWidget):
     """
 
     def __init__(self):
-        """Init method."""
+
         super(ShareNodesUI, self).__init__()
 
         self.setWindowTitle('Share Nodes / Script')
@@ -16,10 +22,10 @@ class ShareNodesUI(QTabWidget):
         self.setMinimumSize(500, 600)
 
         ########################################################################
-        # Create Windgets
+        # Create Widgets
         ########################################################################
 
-        # Create Windgets for Send Tab
+        # Create Widgets for Send Tab
         ########################################################################
         users_QLabel = QLabel('Users')
         self.list_users_QListWidget = QListWidget()
@@ -28,7 +34,7 @@ class ShareNodesUI(QTabWidget):
         search_QLabel = QLabel('Search')
         self.search_users_QLineEdit = QLineEdit()
 
-        stack_label = QLabel('Stack')
+        stack_label = QLabel('Sent To')
         self.stack_QListWidget = QListWidget()
         self.stack_QListWidget.setAcceptDrops(True)
 
@@ -119,7 +125,7 @@ class ShareNodesUI(QTabWidget):
         # Add tabs to Tabwidget (Main UI)
         ########################################################################
         self.addTab(self.send_main_widget, 'Send')
-        self.addTab(self.history_main_widget, 'Histroy')
+        self.addTab(self.history_main_widget, 'History')
 
         ########################################################################
         # Set Style sheets
@@ -133,7 +139,7 @@ class ShareNodesUI(QTabWidget):
 
     @staticmethod
     def get_style_sheet():
-        """Styles the QLineEdit for seaching users."""
+        """Styles the QLineEdit for searching users."""
 
         return '''padding: 2px 2px 2px 20px;
                   background-image: url(zoom.png);
