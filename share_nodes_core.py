@@ -4,7 +4,7 @@
 
 """ShareNodes core functionality , which includes send and received
 scripts, this is the module used to launch the ShareNodes tool from
-with in Nuke."""
+within Nuke."""
 
 import sys
 import getpass
