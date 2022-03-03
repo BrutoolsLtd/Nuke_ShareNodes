@@ -1,2 +1,0 @@
-- name: pylinter
-  uses: alexanderdamiani/pylinter@v1.4.2
