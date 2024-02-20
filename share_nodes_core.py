@@ -4,7 +4,7 @@
 
 """ShareNodes core functionality , which includes send and received
 scripts, this is the module used to launch the ShareNodes tool from
-with in Nuke."""
+within Nuke."""
 
 import sys
 import getpass
@@ -159,7 +159,7 @@ class ShareNodesCore(ShareNodesUI):
 
     @staticmethod
     def create_user_tooltip(user):
-        """Creates a user tooltip string wot show on widget
+        """Creates a user tooltip string to show on widget
 
         Args:
             user:Dictionary with user information.
@@ -173,7 +173,7 @@ class ShareNodesCore(ShareNodesUI):
 
 
 def launch_share_nodes():
-    """Creates an Qt application to launch share nodes tool.
+    """Creates a Qt application to launch share nodes tool.
     """
     app = QApplication.instance()
     if app is None:
